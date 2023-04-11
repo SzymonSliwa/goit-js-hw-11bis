@@ -1,0 +1,44 @@
+user_id:35246329
+
+Your API key: 35246329-add22568f1c638791398d2d1c
+q	
+str	A URL encoded search term. If omitted, all images are returned. This value may not exceed 100 characters.
+Example: "yellow+flower"
+
+image_type	str	Filter results by image type.
+Accepted values: "all", "photo", "illustration", "vector"
+Default: "all"
+
+we want "photo"
+
+
+orientation	str	Whether an image is wider than it is tall, or taller than it is wide.
+Accepted values: "all", "horizontal", "vertical"
+Default: "all"
+
+we want "horizontal"
+
+safesearch	bool	A flag indicating that only images suitable for all ages should be returned.
+Accepted values: "true", "false"
+Default: "false"
+
+we want "true"
+
+
+wanted:
+webformatURL - link do małego obrazka.
+largeImageURL - link do dużego obrazka.
+tags - wiersz z opisem obrazka. Będzie pasować do atrybutu alt.
+likes - liczba “lajków”.
+views - liczba wyświetleń.
+comments - liczba komentarzy.
+downloads - liczba pobrań.
+
+
+
+
+Pixabay API obsługuje paginację poprzez parametry page i per_page. Zrób tak, aby w każdej odpowiedzi pojawiało się po 40 obiektów (domyślnie jest ich 20).
+
+Początkowo wartość parametru page powinna wynosić 1.
+Przy każdym kolejnym żądaniu, koniecznym jest zwiększenie wartości tego parametru o 1.
+Przy wyszukiwaniu według nowego słowa kluczowego wartość page należy cofnąć do początkowego stanu 1, ponieważ będzie miała miejsce paginacja według nowej kolekcji obrazków.
