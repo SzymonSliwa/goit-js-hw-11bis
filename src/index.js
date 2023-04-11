@@ -3,7 +3,7 @@ import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-//axios.defaults.baseURL = 'https://pixabay.com/api/';
+axios.defaults.baseURL = 'https://pixabay.com/api/';
 
 let simpleLightbox = new SimpleLightbox('.gallery a');
 
